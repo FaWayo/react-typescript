@@ -1,13 +1,7 @@
 import React from 'react';
+import { PersonProps } from './Person.types';
 
 
-//object type
-type PersonProps = {
-    name: {
-        first: string;
-        last: string
-    }
-};
 
 const Person: React.FC<PersonProps> = ({ name }) => {
     return (

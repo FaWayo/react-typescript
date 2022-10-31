@@ -1,12 +1,10 @@
 import React from 'react';
-
+import {Name} from './Person.types'
 
 // array type
 type PersonProps = {
-    names: {
-        first: string;
-        last: string
-    }[]
+    //reusing types
+    names: Name[]
 };
 
 export const PersonList: React.FC<PersonProps> = ({ names }) => {
