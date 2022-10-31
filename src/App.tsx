@@ -7,6 +7,9 @@ import { PersonList } from './components/PersonList';
 import Status from './components/Status';
 import Oscar
  from './components/Oscar';
+import Button from './components/Button';
+import Input from './components/Input';
+
 function App() {
   const PersonName = {
     first: 'Bruce',
@@ -44,6 +47,13 @@ return (
     <Oscar>
     <Heading>Oscar goes to Leornardo!!</Heading> 
     </Oscar>
+    {/* event props */}
+    <Button handleClick={(event, id) => {
+      console.log('Button clicked', event, id)
+    }}/>
+    <Input value='' handleChange={(event) => {
+      console.log(event)
+    }}/>
   </div>
 );
 }
