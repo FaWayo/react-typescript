@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Stats } from 'fs';
 import './App.css';
-
+import Greet from './components/Greet';
+import Heading from './components/Heading';
+import Person from './components/Person';
+import { PersonList } from './components/PersonList';
+import Status from './components/Status';
+import Oscar
+ from './components/Oscar';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const PersonName = {
+    first: 'Bruce',
+    last: 'Wayne'
+  }
+
+  const nameList = 
+    [
+      {
+        first: 'Bruce',
+          last: 'Wayne'
+      },
+      {
+        first: 'Clark',
+          last: 'Kent'
+      },
+      {
+        first: 'Princess',
+          last: 'Diana'
+      },
+      {
+        first: 'Princess',
+          last: 'Diana'
+      },
+    ]
+
+
+return (
+  <div className="App">
+    <Greet name='Fatima' isLoggedIn={true} />
+    <Person name={PersonName} />
+    <PersonList names={nameList}/>
+    <Status status='success'/>
+    {/* <Heading>heading heading</Heading> */}
+    <Oscar>
+    <Heading>Oscar goes to Leornardo!!</Heading> 
+    </Oscar>
+  </div>
+);
 }
 
 export default App;
