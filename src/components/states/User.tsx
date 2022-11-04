@@ -8,6 +8,8 @@ type AuthUser = {
 };
 
 const Auth = () => {
+  //initial value type is different to the future value type
+  // for type asertion, instead of null use {} as AuthUser and no user?
     const [user, setUser] = useState<AuthUser | null>(null)
 
     const handleLogin = () => {
